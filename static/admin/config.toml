@@ -1,0 +1,39 @@
+[backend]
+  name = "git-gateway"
+  branch = "main"
+
+[media_library]
+  media_folder = "static/images"
+  public_folder = "/images"
+
+[[collections]]
+  name = "productos"
+  label = "Productos"
+  folder = "content/productos"
+  create = true
+  slug = "{{slug}}"
+
+  [[collections.fields]]
+    name = "title"
+    label = "Título"
+    widget = "string"
+
+  [[collections.fields]]
+    name = "price"
+    label = "Precio"
+    widget = "number"
+
+  [[collections.fields]]
+    name = "image"
+    label = "Imagen"
+    widget = "image"
+
+  [[collections.fields]]
+    name = "category"
+    label = "Categoría"
+    widget = "string"
+
+  [[collections.fields]]
+    name = "body"
+    label = "Descripción"
+    widget = "markdown"

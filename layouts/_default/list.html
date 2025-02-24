@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>Catálogo de Productos</h1>
+<ul>
+    {{ range .Pages }}
+    <li>
+        <img src="{{ .Params.image }}" width="200">
+        <h2>{{ .Title }}</h2>
+        <p>Precio: ${{ .Params.price }}</p>
+        <a href="https://wa.me/1234567890?text=Quiero%20comprar%20{{ .Title }}">Comprar por WhatsApp</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
