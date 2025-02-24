@@ -1,0 +1,3 @@
+[build]
+  command = "curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | jq -r .tag_name && hugo"
+  publish = "public"
