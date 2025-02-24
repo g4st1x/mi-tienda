@@ -1,3 +1,6 @@
 [build]
-  command = "curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | jq -r .tag_name && hugo"
+  command = "hugo"
   publish = "public"
+
+[context.production.environment]
+  HUGO_VERSION = "0.121.1"  # O la versión que necesites
