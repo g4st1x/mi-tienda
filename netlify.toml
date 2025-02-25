@@ -1,3 +1,6 @@
-[build]
+build]
   command = "hugo mod get && hugo"
   publish = "public"
+
+[context.production.environment]
+  HUGO_VERSION = "0.92.2"
